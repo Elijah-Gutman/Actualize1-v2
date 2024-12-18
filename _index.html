@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>USD to EUR Chart</title>
+    <script src="https://code.highcharts.com/stock/highstock.js"></script> <!-- Include Highcharts library -->
+    <script src="https://code.highcharts.com/maps/highmaps.js"></script>
+</head>
+<body>
+
+    <!-- Container for the Highcharts chart -->
+    <div id="container" style="height: 400px; min-width: 310px"></div>
+
+    <!-- Chart script -->
+    <script>
+        // Sample data for USD to EUR exchange rate
+        const usdtoeur = [
+            [Date.UTC(2023, 0, 1), 0.92],
+            [Date.UTC(2023, 0, 2), 0.93],
+            [Date.UTC(2023, 0, 3), 0.91],
+            [Date.UTC(2023, 0, 4), 0.94],
+            [Date.UTC(2023, 0, 5), 0.90],
+            [Date.UTC(2023, 0, 6), 0.95]
+        ];
+
+        let chart; // globally available chart variable
+        document.addEventListener('DOMContentLoaded', function() {
+            chart = Highcharts.stockChart('container', {
+                rangeSelector: {
+                    selected: 1
+                },
+                series: [{
+                    name: 'USD to EUR',
+                    data: usdtoeur // Use the predefined data array
+                }]
+            });
+        });
+    </script>
+
+</body>
+</html>
