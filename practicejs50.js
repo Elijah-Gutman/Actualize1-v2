@@ -1,16 +1,16 @@
-// function sumOfMultiples(n, m) {
-//   let sum = 0;
+function sumOfMultiples(n, m) {
+  let sum = 0;
 
-//   for (let i = m; i <= n; i += m) {
-//     sum += i;
-//   }
+  for (let i = m; i <= n; i += m) {
+    sum += i;
+  }
 
-//   return sum;
-// }
+  return sum;
+}
 
-// const n = 10;
-// const m = 3;
-// console.log(sumOfMultiples(n, m));
+const n = 10;
+const m = 3;
+console.log(sumOfMultiples(n, m));
 
 function countVowels(word) {
   var word1 = word.toLowerCase();
@@ -40,3 +40,19 @@ function countVowels1(word) {
 
 const input1 = "hello world";
 countVowels1(input1);
+
+function findMax(number) {
+  var max = -1000000000;
+  for (var element of number) {
+    if (element === null) {
+      console.log("array is empty");
+    } else if (element > max) {
+      max = element;
+    }
+  }
+  console.log(max);
+  return max;
+}
+
+const input2 = [];
+findMax(input2);
